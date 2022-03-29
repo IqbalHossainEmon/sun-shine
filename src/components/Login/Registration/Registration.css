@@ -1,0 +1,33 @@
+#register {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 100vh;
+}
+#register-form {
+	display: flex;
+	margin-top: 5rem;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+}
+#register-form > input {
+	width: 30rem;
+	padding: 0.5rem;
+	font-size: 1rem;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+	border: none;
+}
+#register-form > button {
+	border: none;
+	padding: 0.5rem 1rem;
+	margin-top: 1rem;
+	font-size: 1.5rem;
+	border-radius: 1rem;
+	color: white;
+	background-color: rgb(255, 145, 0);
+	font-weight: 900;
+	font-family: "Overlock";
+}

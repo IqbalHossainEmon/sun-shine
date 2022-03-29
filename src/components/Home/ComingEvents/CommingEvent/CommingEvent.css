@@ -1,0 +1,19 @@
+.CommingEvent {
+	padding: 1rem;
+	margin: 1rem;
+	background-color: rgb(32, 32, 32);
+}
+.CommingEvent h1 > span {
+	color: orangered;
+}
+.CommingEvent h5 {
+	text-transform: uppercase;
+}
+.CommingEvent .time {
+	color: orangered;
+}
+.CommingEvent .location {
+	display: flex;
+	align-items: center;
+	font-size: 1rem;
+}

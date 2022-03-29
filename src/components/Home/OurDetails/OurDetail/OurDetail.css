@@ -1,0 +1,30 @@
+.ourDetail {
+	background-color: rgb(255, 72, 0);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem 0;
+}
+.ourDetail div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.border-left {
+	border-left: 1px solid black;
+	padding-left: 4rem;
+	padding-right: 4rem;
+}
+.border-right {
+	border-right: 1px solid black;
+	padding-right: 4rem;
+	padding-left: 4rem;
+}
+#no-border {
+	border: none;
+	padding: 2rem 4rem;
+}
+.num {
+	font-size: 4rem;
+}

@@ -1,0 +1,49 @@
+.service {
+	z-index: 1;
+	padding: 1rem 1.4rem;
+	margin: 1rem 1.6rem;
+	background-color: rgb(56, 56, 56);
+	border-radius: 1rem;
+	position: relative;
+	transition: transform 0.5s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	min-width: 15rem;
+}
+.service p {
+	margin: 0;
+}
+.service:hover {
+	cursor: pointer;
+	background-color: rgb(39, 39, 39);
+}
+.service img {
+	transition: transform 0.4s;
+	border-radius: 1rem;
+	width: 100%;
+}
+.service:hover img {
+	transform: scale(1.1);
+}
+.buy-now-btn {
+	background-color: orangered;
+	border: none;
+	padding: 0.5rem 1rem;
+	font-size: 1rem;
+	color: white;
+	border-radius: 2rem;
+	transition: all 0.5s;
+}
+.buy-now-btn:hover {
+	transform: scale(1.1);
+}
+.buy-now-btn:hover {
+	background-color: rgb(255, 38, 0);
+	cursor: pointer;
+}
+.service-info-margin {
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+}

@@ -1,0 +1,15 @@
+/* Common Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Nunito&family=Overlock&display=swap");
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-image: linear-gradient(to right, #181a1b, #040405);
+	font-family: "Nunito", sans-serif;
+	color: beige;
+}
+.h-font {
+	font-family: "Overlock";
+}

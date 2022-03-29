@@ -1,0 +1,26 @@
+.commingEvents > div {
+	display: flex;
+	justify-content: space-around;
+	margin-left: auto;
+	margin-right: auto;
+}
+.commingEvents {
+	margin-top: 5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.commingEvents > button {
+	background-color: orange;
+	border: none;
+	padding: 1rem 3rem;
+	margin-top: 3rem;
+	font-size: 1rem;
+	transition: background-color 0.5s;
+}
+
+.commingEvents > button:hover {
+	background-color: rgb(255, 123, 0);
+	cursor: pointer;
+}

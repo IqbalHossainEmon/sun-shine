@@ -1,0 +1,46 @@
+nav {
+	background-color: #242b2ea8;
+}
+.nav-div {
+	max-width: 85rem;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	justify-content: space-between;
+}
+#nav-title {
+	font-family: "Dancing Script", cursive;
+}
+#hide-nav {
+	visibility: hidden;
+}
+.nav-title {
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	color: #ec8501;
+}
+.nav-title h1 {
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 0.5rem;
+}
+#nav-title::before {
+	content: "S";
+	font-size: 3rem;
+	color: #e87301;
+}
+#nav-links,
+#show,
+#hide-nav {
+	display: flex;
+}
+#nav-links li {
+	list-style: none;
+	margin-right: 2rem;
+}
+#nav-links li a {
+	text-decoration: none;
+	font-weight: 600;
+	color: #e07c24;
+}
