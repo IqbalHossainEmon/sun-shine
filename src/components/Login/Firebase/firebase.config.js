@@ -1,9 +1,9 @@
 const firebaseConfig = {
-	apiKey: "AIzaSyCP8Z_R0giv6yr6usFCTmlHSVaDzMzU0OU",
-	authDomain: "sun-shine-2c51f.firebaseapp.com",
-	projectId: "sun-shine-2c51f",
-	storageBucket: "sun-shine-2c51f.appspot.com",
-	messagingSenderId: "282043507633",
-	appId: "1:282043507633:web:c9d7843628152ac5105390",
+	apiKey: "AIzaSyDtGXI6vhb8Z7_1MeNiYSBAkC1y2BEf83s",
+	authDomain: "sun-shine-6a9d2.firebaseapp.com",
+	projectId: "sun-shine-6a9d2",
+	storageBucket: "sun-shine-6a9d2.appspot.com",
+	messagingSenderId: "89931888829",
+	appId: "1:89931888829:web:5817831a9b2d7e27bf1fd4",
 };
 export default firebaseConfig;

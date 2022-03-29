@@ -3,6 +3,7 @@
 	justify-content: space-between;
 	align-items: center;
 	height: 100vh;
+	font-family: "Nunito", sans-serif;
 }
 .shared {
 	background-color: orange;
@@ -27,15 +28,32 @@
 	margin-top: 0.5rem;
 	margin-bottom: 0.5rem;
 	border: none;
+	font-family: "Nunito", sans-serif;
 }
 #login-form > button {
 	border: none;
 	padding: 0.5rem 1rem;
 	margin-top: 1rem;
 	font-size: 1.5rem;
-	border-radius: 1rem;
+	border-radius: 0.1rem;
 	color: white;
 	background-color: rgb(255, 145, 0);
 	font-weight: 900;
 	font-family: "Overlock";
+}
+.google-button {
+	display: flex;
+	justify-content: space-evenly;
+	margin-top: 1rem;
+	width: 100%;
+}
+.google-button button {
+	display: flex;
+	align-items: center;
+	font-size: 1rem;
+	padding: 0.5rem 1rem;
+	font-family: "Nunito", sans-serif;
+	color: white;
+	background-color: orange;
+	font-weight: 900;
 }

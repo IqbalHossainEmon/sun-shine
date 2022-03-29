@@ -34,6 +34,9 @@ nav {
 #show,
 #hide-nav {
 	display: flex;
+	align-items: center;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
 }
 #nav-links li {
 	list-style: none;
@@ -43,4 +46,24 @@ nav {
 	text-decoration: none;
 	font-weight: 600;
 	color: #e07c24;
+}
+.user {
+	display: flex;
+	align-items: center;
+}
+.user-info img {
+	height: 1.5rem;
+	border-radius: 50%;
+	border: 0.3rem solid white;
+}
+.user-info p {
+	margin: 0;
+	text-align: center;
+	font-size: 0.7rem;
+}
+.logout {
+	margin-left: 1rem;
+}
+.logout:hover {
+	cursor: pointer;
 }

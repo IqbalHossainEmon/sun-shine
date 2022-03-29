@@ -53,7 +53,7 @@ const Banner = () => {
 				setCurrentBanner(currentBanner + 1);
 			}
 		}, 7000);
-	}, [arrayLength, currentBanner]);
+	}, [currentBanner]);
 	return (
 		<div id='banner'>
 			<div>

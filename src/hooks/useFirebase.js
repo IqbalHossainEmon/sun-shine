@@ -2,7 +2,6 @@ import {
 	getAuth,
 	signInWithPopup,
 	GoogleAuthProvider,
-	GithubAuthProvider,
 	onAuthStateChanged,
 	signOut,
 	createUserWithEmailAndPassword,
@@ -17,7 +16,6 @@ initializeAuthentication();
 const auth = getAuth();
 
 const googleProvider = new GoogleAuthProvider();
-const githubProvider = new GithubAuthProvider();
 
 const useFirebase = () => {
 	const [isLoading, setLoading] = useState(true);
@@ -28,21 +26,18 @@ const useFirebase = () => {
 		setLoading(true);
 		return signInWithPopup(auth, googleProvider);
 	};
-
-	const signInUsingGithub = () => {
-		setLoading(true);
-		return signInWithPopup(auth, githubProvider);
-	};
-	const signInUsingPassword = (email, password) => {
+	const signUpUsingPassword = (email, password) => {
 		return createUserWithEmailAndPassword(auth, email, password);
 	};
 
 	const setUserName = (userName) => {
-		updateProfile(auth.currentUser, { displayName: userName })
-			.then((result) => {
-				setUser(result.user);
-			})
-			.catch((error) => setError(error.message));
+		updateProfile(auth.currentUser, {
+			displayName: userName,
+		}).then((result) => {
+			console.log(result);
+			// setUser(result.user);
+		});
+		// .catch((error) => setError(error.message));
 	};
 
 	const signInUsingPass = (email, password) => {
@@ -77,10 +72,9 @@ const useFirebase = () => {
 		setUser,
 		error,
 		setError,
-		signInUsingGithub,
 		signInUsingGoogle,
 		logOut,
-		signInUsingPassword,
+		signUpUsingPassword,
 		setUserName,
 		signInUsingPass,
 	};

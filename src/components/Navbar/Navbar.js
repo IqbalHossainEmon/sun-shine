@@ -1,10 +1,14 @@
 import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
 import "./Navbar.css";
+import { MdOutlineLogout } from "react-icons/md";
+import { AiOutlineUser } from "react-icons/ai";
 
 const Navbar = () => {
+	const { user, logOut } = useAuth();
+
 	const currentUrl = useLocation().pathname;
-	console.log(currentUrl);
 	return (
 		<nav>
 			<div className='nav-div'>
@@ -35,12 +39,32 @@ const Navbar = () => {
 							</li>
 						</div>
 						<li>
-							<span>
-								<NavLink
-									to={currentUrl === "/login" ? "/registration" : "/login"}>
-									{currentUrl === "/login" ? "Registration" : "Login"}
-								</NavLink>
-							</span>
+							{user.email ? (
+								<div className='user'>
+									<div className='user-info'>
+										{user.photoURL ? (
+											<img src={user.photoURL} alt='' />
+										) : (
+											<AiOutlineUser size={30} />
+										)}
+										<p>{user.displayName?.split(" ")[0]}</p>
+									</div>
+									<MdOutlineLogout
+										onClick={logOut}
+										title='Logout'
+										className='logout'
+										color='orange'
+										size={40}
+									/>
+								</div>
+							) : (
+								<span>
+									<NavLink
+										to={currentUrl === "/login" ? "/registration" : "/login"}>
+										{currentUrl === "/login" ? "Registration" : "Login"}
+									</NavLink>
+								</span>
+							)}
 						</li>
 					</ul>
 				</div>
