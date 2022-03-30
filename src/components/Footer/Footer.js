@@ -63,13 +63,7 @@ const Footer = () => {
 					</ul>
 				</div>
 			</div>
-			<div
-				style={{
-					display: "flex",
-					justifyContent: "space-between",
-					alignItems: "center",
-					paddingRight: "2rem",
-				}}>
+			<div id='footer-last-part'>
 				<div id='footer-title'>
 					<a className='nav-title' href='index.html'>
 						<h1 id='footer-title-text'>un Shine</h1>

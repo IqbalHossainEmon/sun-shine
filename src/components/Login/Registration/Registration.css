@@ -3,6 +3,7 @@
 	justify-content: space-around;
 	align-items: center;
 	height: 100vh;
+	text-align: center;
 }
 #register-form {
 	display: flex;
@@ -36,4 +37,9 @@
 	margin-top: 0.5rem;
 	margin-bottom: 0.5rem;
 	visibility: hidden;
+}
+@media (max-width: 535px) {
+	#register-form > input {
+		width: 80vw;
+	}
 }

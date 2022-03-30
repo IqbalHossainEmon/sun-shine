@@ -6,9 +6,7 @@ const OurDetail = ({ data }) => {
 	const { heading, num, extra, id } = data;
 	return (
 		<div className='ourDetail'>
-			<div
-				className={id === 4 ? "border-left" : "border-right"}
-				id={id === 3 ? "no-border" : ""}>
+			<div>
 				<h2 className='h-font'>{heading}</h2>
 				<CountUp className='num' end={num} />
 				<p>

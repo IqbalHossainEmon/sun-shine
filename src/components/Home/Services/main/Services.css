@@ -2,10 +2,10 @@
 	position: relative;
 	z-index: 5;
 	margin-top: -5rem;
-	overflow-x: hidden;
 }
 #croper {
 	overflow-x: hidden;
+	width: 63rem;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -14,33 +14,44 @@
 	display: flex;
 }
 #pre-next-button button {
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	position: absolute;
 	width: 3rem;
-	background-color: orange;
+	background-color: transparent;
 	border: none;
 	padding: 0;
 	margin: 0;
-	border-radius: 50%;
 	z-index: 4;
-	box-shadow: 0 0 1rem 0rem orange;
 	transition: all 0.4s;
 	top: 10rem;
 }
 #pre-next-button button:hover {
 	cursor: pointer;
-	background-color: rgb(255, 94, 0);
-	box-shadow: 0 0 1rem 0rem rgb(255, 94, 0);
+	box-shadow: 0 0 1rem 0rem orange;
 }
 #pre-next-button button:active {
-	background-color: rgb(165, 61, 1);
-	box-shadow: 0 0 1rem 0rem rgb(165, 61, 1);
+	background-color: rgba(255, 166, 0, 0.39);
+	border-radius: 3rem;
+	box-shadow: 0 0 1rem 0rem orange;
 }
 #pre-button {
 	left: 1rem;
 }
 #next-button {
 	right: 1rem;
+}
+@media (min-width: 668px) and (max-width: 1020px) {
+	.services {
+		margin-top: 2rem;
+	}
+	#croper {
+		width: 36rem;
+	}
+}
+@media (max-width: 667px) {
+	.services {
+		margin-top: 2rem;
+	}
+	#croper {
+		width: 18rem;
+	}
 }

@@ -56,7 +56,7 @@ const Banner = () => {
 	}, [currentBanner]);
 	return (
 		<div id='banner'>
-			<div>
+			<div className='container'>
 				{banner.map((data) => (
 					<BannerItem currentBanner={currentBanner} key={data.id} data={data} />
 				))}

@@ -11,6 +11,9 @@ nav {
 #nav-title {
 	font-family: "Dancing Script", cursive;
 }
+.menu {
+	display: none;
+}
 #hide-nav {
 	visibility: hidden;
 }
@@ -66,4 +69,64 @@ nav {
 }
 .logout:hover {
 	cursor: pointer;
+}
+@media (max-width: 668px) {
+	nav {
+		position: relative;
+	}
+	.menu {
+		display: block;
+		padding: 1rem;
+	}
+	#nav-links,
+	#show,
+	#hide-nav {
+		align-items: center;
+		margin-top: 0rem;
+		margin-bottom: 0rem;
+	}
+	.show {
+		top: 4.1rem;
+	}
+	.hide {
+		top: -25rem;
+	}
+	#nav-links {
+		position: absolute;
+		z-index: 3;
+		width: 17.5rem;
+		padding: 0;
+		right: 0;
+		background-color: #242b2e;
+		transition: top 0.5s;
+	}
+	#nav-links,
+	#nav-links > div {
+		display: block;
+	}
+	#nav-links li {
+		margin-top: 0rem;
+		margin-right: 0rem;
+		text-align: center;
+		border: 1px solid black;
+		margin: 0;
+	}
+	#nav-links li a {
+		display: block;
+		padding: 1rem 2rem;
+	}
+	.user-info {
+		border-bottom: 2px solid black;
+		padding: 1rem 0;
+	}
+	.user {
+		display: block;
+	}
+	.logout-button {
+		padding: 0.3rem 0;
+	}
+
+	.logout {
+		z-index: 5;
+	}
 }

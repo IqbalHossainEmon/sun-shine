@@ -3,7 +3,7 @@
 	padding: 1rem 1.4rem;
 	margin: 1rem 1.6rem;
 	background-color: rgb(56, 56, 56);
-	border-radius: 1rem;
+	border-radius: 0.8rem;
 	position: relative;
 	transition: transform 0.5s;
 	display: flex;
@@ -33,7 +33,7 @@
 	padding: 0.5rem 1rem;
 	font-size: 1rem;
 	color: white;
-	border-radius: 2rem;
+	border-radius: 0.5rem;
 	transition: all 0.5s;
 }
 .buy-now-btn:hover {
@@ -46,4 +46,16 @@
 .service-info-margin {
 	margin-top: 0.5rem;
 	margin-bottom: 0.5rem;
+}
+@media (min-width: 668px) and (max-width: 1020px) {
+	.service {
+		margin: 0.5rem;
+		padding: 1rem 1rem;
+	}
+}
+@media (max-width: 667px) {
+	.service {
+		margin: 0.5rem;
+		padding: 1rem 1rem;
+	}
 }

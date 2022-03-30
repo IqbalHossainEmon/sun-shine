@@ -1,9 +1,10 @@
 #login {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
-	height: 100vh;
 	font-family: "Nunito", sans-serif;
+	height: 100vh;
+	text-align: center;
 }
 .shared {
 	background-color: orange;
@@ -56,4 +57,14 @@
 	color: white;
 	background-color: orange;
 	font-weight: 900;
+}
+@media (max-width: 1240px) {
+	.shared {
+		display: none;
+	}
+}
+@media (max-width: 535px) {
+	#login-form > input {
+		width: 80vw;
+	}
 }

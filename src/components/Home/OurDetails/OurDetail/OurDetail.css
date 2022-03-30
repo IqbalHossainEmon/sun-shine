@@ -3,7 +3,9 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 2rem 0;
+	padding: 4rem;
+	text-align: center;
+	border: 1px solid black;
 }
 .ourDetail div {
 	display: flex;
@@ -11,20 +13,7 @@
 	justify-content: center;
 	align-items: center;
 }
-.border-left {
-	border-left: 1px solid black;
-	padding-left: 4rem;
-	padding-right: 4rem;
-}
-.border-right {
-	border-right: 1px solid black;
-	padding-right: 4rem;
-	padding-left: 4rem;
-}
-#no-border {
-	border: none;
-	padding: 2rem 4rem;
-}
+
 .num {
 	font-size: 4rem;
 }

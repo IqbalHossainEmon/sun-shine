@@ -13,3 +13,9 @@ body {
 .h-font {
 	font-family: "Overlock";
 }
+.container {
+	max-width: 85rem;
+	min-width: 18rem;
+	margin-right: auto;
+	margin-left: auto;
+}

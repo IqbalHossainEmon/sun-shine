@@ -3,6 +3,7 @@
 	padding-bottom: 2rem;
 	background-color: orange;
 	padding-top: 2rem;
+	min-width: 18rem;
 }
 .FootermegaLink {
 	display: grid;
@@ -30,4 +31,34 @@
 	content: "S";
 	font-size: 3rem;
 	color: #000000;
+}
+#footer-last-part {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-right: 2rem;
+}
+@media (min-width: 668px) and (max-width: 1020px) {
+	.FootermegaLink {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+@media (min-width: 379px) and (max-width: 667px) {
+	.FootermegaLink {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+@media (max-width: 378px) {
+	.FootermegaLink {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+@media (max-width: 460px) {
+	#footer-last-part {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		padding-right: 1rem;
+	}
 }

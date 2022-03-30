@@ -3,6 +3,7 @@
 	height: 40rem;
 	width: 100%;
 	background-color: orange;
+	min-width: 18rem;
 }
 .nav-button-container {
 	display: flex;
@@ -32,4 +33,17 @@
 #active-nav-button {
 	border: 3px solid rgb(112, 112, 112);
 	background-color: orange;
+}
+
+@media (min-width: 668px) and (max-width: 1020px) {
+	#banner {
+		height: 50rem;
+		width: 100%;
+	}
+}
+@media (max-width: 667px) {
+	#banner {
+		height: 47rem;
+		width: 100%;
+	}
 }

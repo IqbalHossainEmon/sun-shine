@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import "./Navbar.css";
 import { MdOutlineLogout } from "react-icons/md";
-import { AiOutlineUser } from "react-icons/ai";
+import { AiOutlineUser, AiOutlineMenu } from "react-icons/ai";
 
 const Navbar = () => {
 	const { user, logOut } = useAuth();
+	const [show, setShow] = useState(false);
 
 	const currentUrl = useLocation().pathname;
 	return (
@@ -21,7 +22,10 @@ const Navbar = () => {
 				</div>
 				{/* Nav Links */}
 				<div>
-					<ul id='nav-links'>
+					<div className='menu'>
+						<AiOutlineMenu onClick={() => setShow(!show)} size={30} />
+					</div>
+					<ul id='nav-links' className={show ? "show" : "hide"}>
 						<div
 							id={
 								currentUrl === "/login" || currentUrl === "/registration"
@@ -39,7 +43,7 @@ const Navbar = () => {
 							</li>
 						</div>
 						<li>
-							{user.email ? (
+							{user?.email ? (
 								<div className='user'>
 									<div className='user-info'>
 										{user.photoURL ? (
@@ -47,15 +51,17 @@ const Navbar = () => {
 										) : (
 											<AiOutlineUser size={30} />
 										)}
-										<p>{user.displayName?.split(" ")[0]}</p>
+										<p>{user.displayName}</p>
 									</div>
-									<MdOutlineLogout
-										onClick={logOut}
-										title='Logout'
-										className='logout'
-										color='orange'
-										size={40}
-									/>
+									<div className='logout-button'>
+										<MdOutlineLogout
+											onClick={logOut}
+											title='Logout'
+											className='logout'
+											color='orange'
+											size={40}
+										/>
+									</div>
 								</div>
 							) : (
 								<span>

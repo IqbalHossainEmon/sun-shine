@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 import Shared from "../Shared/Shared";
@@ -18,7 +18,6 @@ const Registrantion = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		console.log(password, email, registrationUserName);
 		if (password === "" || email === "" || registrationUserName === "") {
 			setreqMessage("Please fill All the Fields");
 			setValidated(true);
@@ -88,8 +87,7 @@ const Registrantion = () => {
 							? { visibility: "visible" }
 							: { visibility: "hidden" }
 					}>
-					{reqMessage}
-					{error}
+					{reqMessage !== "-" ? reqMessage : error}
 				</p>
 				<button onClick={handleSubmit} type='submit'>
 					Sign Up

@@ -31,13 +31,14 @@ const useFirebase = () => {
 	};
 
 	const setUserName = (userName) => {
+		setUser(user.displayName);
 		updateProfile(auth.currentUser, {
 			displayName: userName,
-		}).then((result) => {
-			console.log(result);
-			// setUser(result.user);
-		});
-		// .catch((error) => setError(error.message));
+		})
+			.then((result) => {
+				setUser(result.user);
+			})
+			.catch((error) => console.log(error.message));
 	};
 
 	const signInUsingPass = (email, password) => {

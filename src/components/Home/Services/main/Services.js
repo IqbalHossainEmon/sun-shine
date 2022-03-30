@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Service from "../Service/Service";
 import "./Services.css";
+import { FcNext, FcPrevious } from "react-icons/fc";
 
 const services = [
 	{
@@ -54,28 +55,36 @@ const services = [
 ];
 
 const Services = () => {
-	const [servicePostion, setServicePostion] = useState(1);
-
+	const [servicePostion, setServicePostion] = useState(0);
+	const width = window.innerWidth;
 	const previous = () => {
-		if (servicePostion > -36) {
-			setServicePostion(servicePostion - 12);
+		if (servicePostion > -63 && width > 1020) {
+			setServicePostion(servicePostion - 21);
+		} else if (servicePostion > -72 && width <= 1020) {
+			setServicePostion(servicePostion - 18);
+		} else if (servicePostion > -90 && width < 688) {
+			setServicePostion(servicePostion - 18);
 		}
 	};
 	const next = () => {
-		if (servicePostion < 1) {
-			setServicePostion(servicePostion + 12);
+		if (servicePostion < 0 && width > 1020) {
+			setServicePostion(servicePostion + 21);
+		} else if (servicePostion < 0 && width <= 1020) {
+			setServicePostion(servicePostion + 18);
+		} else if (servicePostion > 0 && width < 688) {
+			setServicePostion(servicePostion + 18);
 		}
 	};
-	console.log(servicePostion);
+
 	return (
-		<div id='services' className='services'>
+		<div id='services' className='services container'>
 			<div id='croper'>
 				<div id='pre-next-button'>
 					<button onClick={previous} id='pre-button'>
-						<img src='images/button/previous.svg' alt='' />
+						<FcPrevious size={30} />
 					</button>
 					<button onClick={next} id='next-button'>
-						<img src='images/button/next.svg' alt='' />
+						<FcNext size={30} />
 					</button>
 				</div>
 				<div className='services-main'>
